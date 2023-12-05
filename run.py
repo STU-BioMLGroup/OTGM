@@ -80,7 +80,7 @@ def main():
         # pretrain
         pretrain_dir = 'pretrain/%s/rate_%s' % (config['dataset'], config['training']['aligned_ratio'])
         if not os.path.exists(pretrain_dir):
-            os.mkdir(pretrain_dir)
+            os.makedirs(pretrain_dir)
         pretrain_name = '%s_alpha_%s_l1_%s_l2_%s_%s.pkl' % (config['dataset'], config['training']['alpha'], config['training']['lambda1'],
             config['training']['lambda2'], config['training']['pre_name'])
         pretrain_path = os.path.join(pretrain_dir, pretrain_name)
